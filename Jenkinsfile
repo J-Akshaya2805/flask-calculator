@@ -31,3 +31,10 @@ pipeline {
 
     post {
         success {
+            echo 'SUCCESS: Flask Calculator Docker image built successfully.'
+        }
+        failure {
+            echo 'FAILED: Check the Jenkins console output for details.'
+        }
+    }
+}
