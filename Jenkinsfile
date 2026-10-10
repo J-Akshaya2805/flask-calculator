@@ -14,13 +14,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                powershell 'docker build -t flask-calculator .'
+                powershell '& "C:\Users\AKSHAYA JEYAGOPAL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" build -t flask-calculator .'
             }
         }
 
         stage('Verify Docker Image') {
             steps {
-                powershell 'docker image inspect flask-calculator'
+                powershell '& "C:\Users\AKSHAYA JEYAGOPAL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" image inspect flask-calculator'
             }
         }
     }
